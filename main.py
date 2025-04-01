@@ -36,13 +36,13 @@ def start(store):
                 print("\nEnter product number (or press enter to finish):")
                 # List all active products with index
                 for i, product in enumerate(store.get_all_products(), start=1):
-                    print(f"{i}. {product.name} (Price: ${product.price}, Quantity: {product.quantity})")
+                    print(f"{i}. {product.name} (Price: ${product.price}, "
+                          f"Quantity: {product.quantity})")
                 selection = input()
 
                 # Finish order if input is empty
                 if selection == '':
                     break
-
 
                 try:
                     selection = int(selection) - 1
