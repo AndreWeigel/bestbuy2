@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="add a Store class">
+    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="add general untracked files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,13 +105,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743494653144</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add main.py to handle stores and products">
+      <option name="closed" value="true" />
+      <created>1743506365469</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743506365469</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add general untracked files">
+      <option name="closed" value="true" />
+      <created>1743506504481</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743506504481</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create Product class" />
     <MESSAGE value="add descriptions to methods in Product class" />
     <MESSAGE value="add a Store class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a Store class" />
+    <MESSAGE value="add main.py to handle stores and products" />
+    <MESSAGE value="add general untracked files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add general untracked files" />
   </component>
 </project>
