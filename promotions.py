@@ -7,7 +7,7 @@ class Promotion(ABC):
         self.name = name
 
     @abstractmethod
-    def apply_promotion(self, product: "products.Product", quantity: int) -> float:
+    def apply_promotion(self, product, quantity: int) -> float:
         """Calculate the total price after applying the promotion."""
         pass
 
@@ -20,7 +20,7 @@ class PercentDiscount(Promotion):
             raise ValueError("Percent must be between 0 and 100.")
         self.percentage = percentage
 
-    def apply_promotion(self, product: "products.Product", quantity: int) -> float:
+    def apply_promotion(self, product, quantity: int) -> float:
         """Applies the percentage discount to the total price."""
         price = product.price * quantity * (1 - self.percentage / 100)
         return price
@@ -31,7 +31,7 @@ class SecondHalfPrice(Promotion):
     def __init__(self, name: str):
         super().__init__(name)
 
-    def apply_promotion(self, product: "products.Product", quantity: int) -> float:
+    def apply_promotion(self, product, quantity: int) -> float:
         """Applies the second-half-price promotion."""
         discount = 0.5
         quantity_half_price = quantity // 2
@@ -49,7 +49,7 @@ class ThirdOneFree(Promotion):
     def __init__(self, name: str):
         super().__init__(name)
 
-    def apply_promotion(self, product: "products.Product", quantity: int) -> float:
+    def apply_promotion(self, product, quantity: int) -> float:
         """Applies the third-one-free promotion."""
         quantity_full_price = 1 - quantity // 3
         price_full_price = quantity_full_price * product.price

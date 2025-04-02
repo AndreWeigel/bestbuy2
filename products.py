@@ -72,7 +72,9 @@ class Product:
         """Displays the product's details."""
 
         product_info = f"{self.name}, Price: {self.price}, Quantity: {self.quantity}"
-        print(product_info)
+        if self._promotion:
+            promo_info = f" (Promotion: {self._promotion.name})"
+            product_info += promo_info
         return product_info
 
     def buy(self, purchase_quantity: int) -> float:
@@ -83,7 +85,11 @@ class Product:
         if purchase_quantity > self._quantity:
             raise ValueError("Insufficient product quantity.")
 
-        total_price = self.price * purchase_quantity
+        if self.promotion:
+            total_price = self.promotion.apply_promotion(self, purchase_quantity)
+        else:
+            total_price = self.price * purchase_quantity
+
         self._quantity -= purchase_quantity
 
         if self._quantity == 0:
@@ -104,16 +110,18 @@ class NonStockedProduct(Product):
     def show(self) -> str:
         """Displays the product's details."""
 
-        product_info = (f"{self.name}, Price: {self.price}"
-                        f" (Non-stocked product: quantity is unlimited)")
-        print(product_info)
-        return product_info
+        product_info = super().show()
+        extra_info = " (Non-stocked product: quantity is unlimited)"
+        return product_info + extra_info
 
     def buy(self, purchase_quantity: int) -> float:
         """Processes the purchase of a specified quantity of the product."""
         if not isinstance(purchase_quantity, int) or purchase_quantity <= 0:
             raise ValueError("Purchase quantity must be a positive integer.")
-        total_price = self.price * purchase_quantity
+        if self.promotion:
+            total_price = self.promotion.apply_promotion(self, purchase_quantity)
+        else:
+            total_price = self.price * purchase_quantity
         return total_price
 
 
@@ -137,7 +145,6 @@ class LimitedProduct(Product):
     def show(self) -> str:
         """Displays the product's details."""
 
-        product_info = (f"{self.name}, Price: {self.price}, Quantity: {self._quantity}"
-                        f" (Limited to {self.maximum} per order)")
-        print(product_info)
-        return product_info
+        product_info = super().show()
+        extra_info = f" (Limited to {self.maximum} per order)"
+        return product_info + extra_info

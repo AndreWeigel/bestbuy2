@@ -30,7 +30,7 @@ def test_create_product_with_invalid_details():
 def test_product_becomes_inactive_when_quantity_zero():
     product = Product("Test Product", 10.0, 1)
     product.buy(1)
-    assert product.get_quantity() == 0
+    assert product.quantity == 0
     assert not product.is_active()
 
 
@@ -39,7 +39,7 @@ def test_product_purchase_modifies_quantity_and_returns_price():
     product = Product("Test Product", 11.0, 6)
     total_price = product.buy(2)
     assert total_price == 22.0
-    assert product.get_quantity() == 4
+    assert product.quantity == 4
     assert product.is_active()
 
 

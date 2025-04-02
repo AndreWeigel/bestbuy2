@@ -1,4 +1,5 @@
 import products
+import promotions
 from store import Store
 
 # Menu string to be displayed to the user
@@ -21,7 +22,7 @@ def start(store):
             # Display all active products
             print("\nAvailable products:")
             for product in store.get_all_products():
-                product.show()
+                print(product.show())
 
         elif choice == '2':
             # Display total quantity of products in the store
@@ -36,7 +37,7 @@ def start(store):
                 print()
                 for i, product in enumerate(store.get_all_products(), start=1):
                     print(f'{i}. ', end='')
-                    product.show()
+                    print(product.show())
                 selection = input("\nEnter product number (or press enter to finish):")
 
                 # Finish order if input is empty
@@ -77,6 +78,16 @@ def main():
         products.NonStockedProduct("Windows License", price=125),
         products.LimitedProduct("Shipping", price=10, quantity=250, maximum=1)
     ]
+
+    # Create promotion catalog
+    second_half_price = promotions.SecondHalfPrice("Second Half price!")
+    third_one_free = promotions.ThirdOneFree("Third One Free!")
+    thirty_percent = promotions.PercentDiscount("30% off!", percentage=30)
+
+    # Add promotions to products
+    product_list[0].promotion = second_half_price
+    product_list[1].promotion = third_one_free
+    product_list[3].promotion = thirty_percent
 
     # Creating a store instance with the product inventory
     best_buy = Store(product_list)
