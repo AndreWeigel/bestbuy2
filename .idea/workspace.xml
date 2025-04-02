@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="change show() to __str__()">
+    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="add comparison operations between products &gt;, &lt;, &gt;=, &lt;= and ==">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products.py" beforeDir="false" afterPath="$PROJECT_DIR$/products.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.py" beforeDir="false" afterPath="$PROJECT_DIR$/store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743628858176</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add comparison operations between products &gt;, &lt;, &gt;=, &lt;= and ==">
+      <option name="closed" value="true" />
+      <created>1743629685425</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1743629685425</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -296,6 +305,7 @@
     <MESSAGE value="correct circular import problem" />
     <MESSAGE value="implement promotions in products and main&#10;add changes to test" />
     <MESSAGE value="change show() to __str__()" />
-    <option name="LAST_COMMIT_MESSAGE" value="change show() to __str__()" />
+    <MESSAGE value="add comparison operations between products &gt;, &lt;, &gt;=, &lt;= and ==" />
+    <option name="LAST_COMMIT_MESSAGE" value="add comparison operations between products &gt;, &lt;, &gt;=, &lt;= and ==" />
   </component>
 </project>

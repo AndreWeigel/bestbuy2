@@ -78,26 +78,31 @@ class Product:
         return product_info
 
     def __lt__(self, other):
+        """Less-than comparison based on product price."""
         if isinstance(other, Product):
             return self.price < other.price
         return NotImplemented
 
     def __gt__(self, other):
+        """Greater-than comparison based on product price."""
         if isinstance(other, Product):
             return self.price > other.price
         return NotImplemented
 
     def __le__(self, other):
+        """Less-than-or-equal comparison based on product price."""
         if isinstance(other, Product):
             return self.price <= other.price
         return NotImplemented
 
     def __ge__(self, other):
+        """Greater-than-or-equal comparison based on product price."""
         if isinstance(other, Product):
             return self.price >= other.price
         return NotImplemented
 
     def __eq__(self, other):
+        """Equality comparison based on product price."""
         if isinstance(other, Product):
             return self.price == other.price
         return NotImplemented

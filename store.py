@@ -34,3 +34,7 @@ class Store:
             total_cost += product.buy(quantity)
 
         return total_cost
+
+    def __contains__(self, product: products.Product) -> bool:
+        """Check if a product exists in the store inventory using 'in' operator."""
+        return product in self.inventory
