@@ -1,4 +1,4 @@
-#import promotions
+import promotions
 
 
 class Product:
@@ -21,7 +21,22 @@ class Product:
         self.price = price
         self._quantity = quantity
         self.active = True
-        self.promotion = None
+        self._promotion = None
+
+    @property
+    def promotion(self) -> int:
+        """Returns the current promotions of the product."""
+
+        return self._promotion
+
+    @promotion.setter
+    def promotion(self, new_promotion: promotions.Promotion):
+        """Updates the product promotions."""
+
+        if not isinstance(new_promotion, promotions.Promotion):
+            raise ValueError("Promotions must be of type 'Promotion'.")
+
+        self._promotion = new_promotion
 
     @property
     def quantity(self) -> int:

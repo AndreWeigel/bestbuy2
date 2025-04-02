@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="match signature of the base method to subclasses">
+    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="remove typo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products.py" beforeDir="false" afterPath="$PROJECT_DIR$/products.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store.py" beforeDir="false" afterPath="$PROJECT_DIR$/store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/promotions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +235,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743624035196</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="make quality a property">
+      <option name="closed" value="true" />
+      <created>1743624934166</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743624934166</updated>
+    </task>
+    <task id="LOCAL-00015" summary="remove typo">
+      <option name="closed" value="true" />
+      <created>1743625282654</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1743625282654</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -252,6 +268,8 @@
     <MESSAGE value="some adaptations to make main handle the new product classes" />
     <MESSAGE value="add promotions class" />
     <MESSAGE value="match signature of the base method to subclasses" />
-    <option name="LAST_COMMIT_MESSAGE" value="match signature of the base method to subclasses" />
+    <MESSAGE value="make quality a property" />
+    <MESSAGE value="remove typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove typo" />
   </component>
 </project>
