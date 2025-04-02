@@ -1,1 +1,1 @@
-# No external packages required
+pytest~=8.3.5
