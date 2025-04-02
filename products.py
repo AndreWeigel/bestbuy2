@@ -71,17 +71,52 @@ class Product:
         return total_price
 
 
-# Test
-if __name__ == "__main__":
-    bose = Product("Bose QuietComfort Earbuds", price=250, quantity=500)
-    mac = Product("MacBook Air M2", price=1450, quantity=100)
+# Subclass for non-stocked products
+class NonStockedProduct(Product):
+    def __init__(self, name: str, price: float):
+        super().__init__(name, price, quantity=0)
 
-    print(bose.buy(50))
-    print(mac.buy(100))
-    print(mac.is_active())
+    def set_quantity(self, quantity: int):
+        """Prevents changing quantity for non-stocked items"""
+        pass
 
-    bose.show()
-    mac.show()
+    def show(self) -> str:
+        """Displays the product's details."""
 
-    bose.set_quantity(1000)
-    bose.show()
+        product_info = (f"{self.name}, Price: {self.price},"
+                        f" (Non-stocked product: quantity is unlimited)")
+        print(product_info)
+        return product_info
+
+    def buy(self, quantity: int) -> float:
+        """Processes the purchase of a specified quantity of the product."""
+        if not isinstance(quantity, int) or quantity <= 0:
+            raise ValueError("Purchase quantity must be a positive integer.")
+        total_price = self.price * quantity
+        return total_price
+
+
+class LimitedProduct(Product):
+    def __init__(self, name: str, price: float, quantity: int, maximum: int):
+        super().__init__(name, price, quantity)
+        if not isinstance(maximum, int) or maximum <= 0:
+            raise ValueError("Maximum per order must be a positive integer.")
+        self.maximum = maximum
+
+    def buy(self, quantity: int) -> float:
+        """Processes the purchase of a specified quantity of the product."""
+        if not isinstance(quantity, int) or quantity <= 0:
+            raise ValueError("Purchase quantity must be a positive integer.")
+        if quantity > self.maximum:
+            raise ValueError(f"It is not possible purchase more than {self.maximum} "
+                             f"units per order.")
+        total_price = super().buy(quantity)
+        return total_price
+
+    def show(self) -> str:
+        """Displays the product's details."""
+
+        product_info = (f"{self.name}, Price: {self.price}, Quantity: {self.quantity}"
+                        f" (Limited to {self.maximum} per order)")
+        print(product_info)
+        return product_info

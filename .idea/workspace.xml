@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="Correct styling">
-      <change beforePath="$PROJECT_DIR$/.idea/bestbuy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bestbuy.iml" afterDir="false" />
+    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="add unit tests and add pytest to requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.py" beforeDir="false" afterPath="$PROJECT_DIR$/products.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.py" beforeDir="false" afterPath="$PROJECT_DIR$/store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_product.py">
+  <component name="RunManager">
     <configuration name="Python tests for test_product.test_create_normal_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="bestbuy" />
       <option name="ENV_FILES" value="" />
@@ -194,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743511391654</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add unit tests and add pytest to requirements.txt">
+      <option name="closed" value="true" />
+      <created>1743609592449</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743609592449</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -206,6 +215,7 @@
     <MESSAGE value="added some comments to make main more understandable" />
     <MESSAGE value="add README.md and an empty requirements.txt" />
     <MESSAGE value="Correct styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct styling" />
+    <MESSAGE value="add unit tests and add pytest to requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unit tests and add pytest to requirements.txt" />
   </component>
 </project>
