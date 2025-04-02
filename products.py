@@ -60,16 +60,16 @@ class Product:
         print(product_info)
         return product_info
 
-    def buy(self, purchace_quantity: int) -> float:
+    def buy(self, purchase_quantity: int) -> float:
         """Processes the purchase of a specified quantity of the product."""
 
-        if not isinstance(purchace_quantity, int) or purchace_quantity <= 0:
+        if not isinstance(purchase_quantity, int) or purchase_quantity <= 0:
             raise ValueError("Purchase quantity must be a positive integer.")
-        if purchace_quantity > self._quantity:
+        if purchase_quantity > self._quantity:
             raise ValueError("Insufficient product quantity.")
 
-        total_price = self.price * purchace_quantity
-        self._quantity -= purchace_quantity
+        total_price = self.price * purchase_quantity
+        self._quantity -= purchase_quantity
 
         if self._quantity == 0:
             self.deactivate()
@@ -94,11 +94,11 @@ class NonStockedProduct(Product):
         print(product_info)
         return product_info
 
-    def buy(self, purchace_quantity: int) -> float:
+    def buy(self, purchase_quantity: int) -> float:
         """Processes the purchase of a specified quantity of the product."""
-        if not isinstance(purchace_quantity, int) or purchace_quantity <= 0:
+        if not isinstance(purchase_quantity, int) or purchase_quantity <= 0:
             raise ValueError("Purchase quantity must be a positive integer.")
-        total_price = self.price * purchace_quantity
+        total_price = self.price * purchase_quantity
         return total_price
 
 
@@ -109,14 +109,14 @@ class LimitedProduct(Product):
             raise ValueError("Maximum per order must be a positive integer.")
         self.maximum = maximum
 
-    def buy(self, purchace_quantity: int) -> float:
+    def buy(self, purchase_quantity: int) -> float:
         """Processes the purchase of a specified quantity of the product."""
-        if not isinstance(purchace_quantity, int) or purchace_quantity <= 0:
+        if not isinstance(purchase_quantity, int) or purchase_quantity <= 0:
             raise ValueError("Purchase quantity must be a positive integer.")
-        if purchace_quantity > self.maximum:
+        if purchase_quantity > self.maximum:
             raise ValueError(f"It is not possible purchase more than {self.maximum} "
                              f"units per order.")
-        total_price = super().buy(purchace_quantity)
+        total_price = super().buy(purchase_quantity)
         return total_price
 
     def show(self) -> str:
