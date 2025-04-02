@@ -77,6 +77,31 @@ class Product:
             product_info += promo_info
         return product_info
 
+    def __lt__(self, other):
+        if isinstance(other, Product):
+            return self.price < other.price
+        return NotImplemented
+
+    def __gt__(self, other):
+        if isinstance(other, Product):
+            return self.price > other.price
+        return NotImplemented
+
+    def __le__(self, other):
+        if isinstance(other, Product):
+            return self.price <= other.price
+        return NotImplemented
+
+    def __ge__(self, other):
+        if isinstance(other, Product):
+            return self.price >= other.price
+        return NotImplemented
+
+    def __eq__(self, other):
+        if isinstance(other, Product):
+            return self.price == other.price
+        return NotImplemented
+
     def buy(self, purchase_quantity: int) -> float:
         """Processes the purchase of a specified quantity of the product."""
 
