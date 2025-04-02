@@ -38,3 +38,8 @@ class Store:
     def __contains__(self, product: products.Product) -> bool:
         """Check if a product exists in the store inventory using 'in' operator."""
         return product in self.inventory
+
+    def __add__(self, other: "Store") -> "Store":
+        """Combine two stores using the + operator to create a new store."""
+        combined_inventory = self.inventory + other.inventory
+        return Store(combined_inventory)
