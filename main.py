@@ -1,7 +1,6 @@
 import products
 from store import Store
 
-
 # Menu string to be displayed to the user
 MENU = """
 ==== Welcome to Best Buy ====
@@ -33,12 +32,12 @@ def start(store):
             # Start making an order
             shopping_list = []
             while True:
-                print("\nEnter product number (or press enter to finish):")
                 # List all active products with index
+                print()
                 for i, product in enumerate(store.get_all_products(), start=1):
-                    print(f"{i}. {product.name} (Price: ${product.price}, "
-                          f"Quantity: {product.quantity})")
-                selection = input()
+                    print(f'{i}. ', end='')
+                    product.show()
+                selection = input("\nEnter product number (or press enter to finish):")
 
                 # Finish order if input is empty
                 if selection == '':
@@ -77,7 +76,7 @@ def main():
         products.Product("Google Pixel 7", price=500, quantity=250),
         products.NonStockedProduct("Windows License", price=125),
         products.LimitedProduct("Shipping", price=10, quantity=250, maximum=1)
-        ]
+    ]
 
     # Creating a store instance with the product inventory
     best_buy = Store(product_list)

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="add unit tests and add pytest to requirements.txt">
+    <list default="true" id="b65bc1b2-3056-4b24-bba8-abae292cfe4a" name="Changes" comment="implement NonStockedProduct and LimitedProduct classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products.py" beforeDir="false" afterPath="$PROJECT_DIR$/products.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store.py" beforeDir="false" afterPath="$PROJECT_DIR$/store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +60,7 @@
   "keyToString": {
     "Python tests.Python tests for test_product.test_create_normal_product.executor": "Run",
     "Python tests.Python tests in test_product.py.executor": "Run",
+    "Python tests.pytest in test_product.py.executor": "Run",
     "Python.main.executor": "Run",
     "Python.products.executor": "Run",
     "Python.store.executor": "Run",
@@ -203,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743609592449</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="implement NonStockedProduct and LimitedProduct classes">
+      <option name="closed" value="true" />
+      <created>1743612993830</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743612993830</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -216,6 +224,7 @@
     <MESSAGE value="add README.md and an empty requirements.txt" />
     <MESSAGE value="Correct styling" />
     <MESSAGE value="add unit tests and add pytest to requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add unit tests and add pytest to requirements.txt" />
+    <MESSAGE value="implement NonStockedProduct and LimitedProduct classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement NonStockedProduct and LimitedProduct classes" />
   </component>
 </project>

@@ -83,7 +83,7 @@ class NonStockedProduct(Product):
     def show(self) -> str:
         """Displays the product's details."""
 
-        product_info = (f"{self.name}, Price: {self.price},"
+        product_info = (f"{self.name}, Price: {self.price}"
                         f" (Non-stocked product: quantity is unlimited)")
         print(product_info)
         return product_info
