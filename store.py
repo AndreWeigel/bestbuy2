@@ -20,7 +20,7 @@ class Store:
 
     def get_total_quantity(self) -> int:
         """Returns the total quantity of all products in the store inventory."""
-        return sum(product.get_quantity() for product in self.inventory)
+        return sum(product.quantity for product in self.inventory)
 
     def get_all_products(self) -> List[products.Product]:
         """Returns a list of all active products in the store inventory."""
@@ -34,5 +34,3 @@ class Store:
             total_cost += product.buy(quantity)
 
         return total_cost
-
-
