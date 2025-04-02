@@ -22,7 +22,7 @@ def start(store):
             # Display all active products
             print("\nAvailable products:")
             for product in store.get_all_products():
-                print(product.show())
+                print(product)
 
         elif choice == '2':
             # Display total quantity of products in the store
@@ -37,7 +37,7 @@ def start(store):
                 print()
                 for i, product in enumerate(store.get_all_products(), start=1):
                     print(f'{i}. ', end='')
-                    print(product.show())
+                    print(product)
                 selection = input("\nEnter product number (or press enter to finish):")
 
                 # Finish order if input is empty

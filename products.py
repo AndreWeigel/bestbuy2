@@ -68,7 +68,7 @@ class Product:
 
         self.active = False
 
-    def show(self) -> str:
+    def __str__(self) -> str:
         """Displays the product's details."""
 
         product_info = f"{self.name}, Price: {self.price}, Quantity: {self.quantity}"
@@ -107,10 +107,10 @@ class NonStockedProduct(Product):
         """Prevents changing quantity for non-stocked items"""
         pass
 
-    def show(self) -> str:
+    def __str__(self) -> str:
         """Displays the product's details."""
 
-        product_info = super().show()
+        product_info = super().__str__()
         extra_info = " (Non-stocked product: quantity is unlimited)"
         return product_info + extra_info
 
@@ -142,9 +142,9 @@ class LimitedProduct(Product):
         total_price = super().buy(purchase_quantity)
         return total_price
 
-    def show(self) -> str:
+    def __str__(self) -> str:
         """Displays the product's details."""
 
-        product_info = super().show()
+        product_info = super().__str__()
         extra_info = f" (Limited to {self.maximum} per order)"
         return product_info + extra_info
