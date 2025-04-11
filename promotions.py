@@ -51,8 +51,10 @@ class ThirdOneFree(Promotion):
 
     def apply_promotion(self, product, quantity: int) -> float:
         """Applies the third-one-free promotion."""
-        quantity_full_price = 1 - quantity // 3
+        quantity_that_is_free = 1 - quantity // 3
+        quantity_full_price = quantity - quantity_that_is_free
         price_full_price = quantity_full_price * product.price
+        return price_full_price
 
 
 
